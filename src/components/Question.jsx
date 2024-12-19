@@ -1,5 +1,5 @@
 export default function Question(props) {
-  const { active, setActive, questions, current } = props;
+  const { active, setActive, dialogQ, dialogA, current } = props;
 
   return (
     <div>
@@ -15,9 +15,9 @@ export default function Question(props) {
               }
             }}
           >
-            {questions}
+            {dialogQ}
           </h1>
-          {active === current ? <p>Answer</p> : null}
+          {active === current ? <p>{dialogA}</p> : null}
         </div>
       </div>
     </div>
